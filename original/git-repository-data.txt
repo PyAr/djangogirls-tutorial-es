@@ -1,0 +1,3 @@
+Version used for translation:
+
+https://github.com/DjangoGirls/tutorial/commit/f11f359bd3b1f044f33e5bd77ff796fc17670f7c
