@@ -1,51 +1,26 @@
 # Resumen
 
-*   [Introducción][1]
-*   [Instalación][2]
-*   [¿Cómo funciona Internet?][3]
-*   [Introducción a la línea de comandos][4]
-*   [Instalación de Python][5]
-*   [Editor de código][6]
-*   [Introducción a Python][7]
-*   [¿Qué es Django?][8]
-*   [Instalacion de Django][9]
-*   [¡Tu primer proyecto en Django!][10]
-*   [Modelos en Django][11]
-*   [Administrador de Django][12]
-*   [¡Despliega!][13]
-*   [Django urls][14]
-*   [Vistas de Django - ¡Es hora de crear!][15]
-*   [Introducción a HTML][16]
-*   [ORM de Django y QuerySets][17]
-*   [Datos dinámicos en plantillas][18]
-*   [Plantillas de Django][19]
-*   [CSS - Hazlo bonito][20]
-*   [Extendiendo plantillas][21]
-*   [Extiende tu aplicación][22]
-*   [Formularios en Django][23]
-*   [¿Qué sigue?][24]
-
- [1]: README.md
- [2]: installation/README.md
- [3]: how_the_internet_works/README.md
- [4]: intro_to_command_line/README.md
- [5]: python_installation/README.md
- [6]: code_editor/README.md
- [7]: python_introduction/README.md
- [8]: django/README.md
- [9]: django_installation/README.md
- [10]: django_start_project/README.md
- [11]: django_models/README.md
- [12]: django_admin/README.md
- [13]: deploy/README.md
- [14]: django_urls/README.md
- [15]: django_views/README.md
- [16]: html/README.md
- [17]: django_orm/README.md
- [18]: dynamic_data_in_templates/README.md
- [19]: django_templates/README.md
- [20]: css/README.md
- [21]: template_extending/README.md
- [22]: extend_your_application/README.md
- [23]: django_forms/README.md
- [24]: whats_next/README.md
+* [Introducción](README.md)
+* [Instalación](installation/README.md)
+* [¿Cómo funciona internet?](how_the_internet_works/README.md)
+* [Introducción a la línea de comandos](intro_to_command_line/README.md)
+* [Instalación de Python](python_installation/README.md)
+* [Editor de código](code_editor/README.md)
+* [Introducción a Python](python_introduction/README.md)
+* [¿Qué es Django?](django/README.md)
+* [Instalación de Django](django_installation/README.md)
+* [¡Tu primer proyecto en Django!](django_start_project/README.md)
+* [Modelos en Django](django_models/README.md)
+* [Administrador de Django](django_admin/README.md)
+* [¡Desplegar!](deploy/README.md)
+* [URLs en Django](django_urls/README.md)
+* [Vistas en Django - ¡Es hora de crear!](django_views/README.md)
+* [Introducción a HTML](html/README.md)
+* [ORM de Django y Querysets](django_orm/README.md)
+* [Datos dinámicos en plantillas](dynamic_data_in_templates/README.md)
+* [Plantillas de Django](django_templates/README.md)
+* [CSS - Hazlo bonito](css/README.md)
+* [Extendiendo plantillas](template_extending/README.md)
+* [Extiende tu aplicación](extend_your_application/README.md)
+* [Formularios en Django](django_forms/README.md)
+* [¿Qué sigue?](whats_next/README.md)

@@ -15,74 +15,91 @@ Vamos a crear un archivo `base.html` en `blog/templates/blog/`:
         └───blog
                 base.html
                 post_list.html
-    
 
 Luego ábrelo y copia todo lo que hay en `post_list.html` al archivo `base.html`, de la siguiente manera:
 
-    html
-    {% load staticfiles %}
-    <html>
-        <head>
-            <title>Django Girls blog</title>
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-            <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-            <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        </head>
-        <body>
-            <div class="page-header">
-                <h1><a href="/">Django Girls Blog</a></h1>
-            </div>
-    
-            <div class="content container">
-                <div class="row">
-                    <div class="col-md-8">
-                    {% for post in posts %}
-                        <div class="post">
-                            <div class="date">
-                                {{ post.published_date }}
-                            </div>
-                            <h1><a href="">{{ post.title }}</a></h1>
-                            <p>{{ post.text|linebreaks }}</p>
-                        </div>
-                    {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </body>
-    </html>
-    
-
-Luego, en `base.html` reemplaza por completo tu `<body>` (todo lo que haya entre `<body>` and `</body>`) con esto:
-
-    html
+```html
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
     <body>
         <div class="page-header">
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
+
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
+                {% for post in posts %}
+                    <div class="post">
+                        <div class="date">
+                            {{ post.published_date }}
+                        </div>
+                        <h1><a href="">{{ post.title }}</a></h1>
+                        <p>{{ post.text|linebreaks }}</p>
+                    </div>
+                {% endfor %}
                 </div>
             </div>
         </div>
     </body>
-    
+</html>
+```
 
-Básicamente remplazamos todo entre `{% for post in posts %}{% endfor %}` con:
+Luego, en `base.html` reemplaza por completo tu `<body>` (todo lo que haya entre `<body>` and `</body>`) con esto:
 
-    html
-    {% block content %}
-    {% endblock %}
-    
+```html
+<body>
+    <div class="page-header">
+        <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+```
 
-¿Qué significa esto? Acabas de crear un `block`, una template tag que te permite insertar HTML en este bloque en otras plantillas que extiendan a `base.html`. Te mostraremos como hacer esto en un momento.
+{% raw %}Básicamente remplazamos todo entre `{% for post in posts %}{% endfor %}` con:{% endraw %}
 
-Ahora guárdalo y abre tu archivo `blog/templates/blog/post_list.html` de nuevo. Elimina todo lo que no esté dentro del body y luego elimina también `<div class="page-header"></div>`, de forma que tu archivo se verá asi:
+```html
+{% block content %}
+{% endblock %}
+```
 
-    html
+¿Qué significa esto? Acabas de crear un `block`, una template tag que te permite insertar HTML en este bloque en otras plantillas que extiendan esta plantilla (`base.html`). Te mostraremos como hacer esto en un momento.
+
+Ahora guarda `base.html` y abre tu archivo `blog/templates/blog/post_list.html` de nuevo. {% raw %}Elimina todo lo que está por encima de `{% for post in posts %}` y debajo de `{% endfor %}`. Cuando lo hayas hecho, el archivo deberá lucir similar a esto:{% endraw %}
+
+```html
+{% for post in posts %}
+    <div class="post">
+        <div class="date">
+            {{ post.published_date }}
+        </div>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
+```
+
+Queremos utilizar esto como parte de nuestro template para todos los bloques de contenido. ¡Es hora de agregar etiquetas de bloques a este archivo!
+
+{% raw %}Quieres que etiqueta de bloque coincida con la etiqueta en el archivo `base.html`. También querrás que este incluya todo el código que pertenece al bloque `content` (contenido). Para hacer eso, pon todo entre `{% block content %}` y `{% endblock content %}`. Así: {% endraw %}
+
+```html
+
+{% block content %}
     {% for post in posts %}
         <div class="post">
             <div class="date">
@@ -92,31 +109,27 @@ Ahora guárdalo y abre tu archivo `blog/templates/blog/post_list.html` de nuevo.
             <p>{{ post.text|linebreaks }}</p>
         </div>
     {% endfor %}
-    
+{% endblock %}
+```
 
-Y ahora agrega esta línea al inicio del archivo:
+Sólo nos falta una cosa. Necesitamos conectar estas dos plantillas. ¡Esto es de lo que se trata la extensión de plantillas! Vamos a hacer esto agregando un bloque de extensión al principio del archivo. De esta forma:
 
-    {% extends 'blog/base.html' %}
-    
+```html
+{% extends 'blog/base.html' %}
 
-{% raw %}Esto significa que ahora estamos extendiendo la plantilla `base.html` en `post_list.html`. Sólo nos falta una cosa: poner todo (excepto la línea que acabamos de agregar) entre `{% block content %}` y `{% endblock content %}`. Algo como esto:{% endraw %}
-
-    html
-    {% extends 'blog/base.html' %}
-    
-    {% block content %}
-        {% for post in posts %}
-            <div class="post">
-                <div class="date">
-                    {{ post.published_date }}
-                </div>
-                <h1><a href="">{{ post.title }}</a></h1>
-                <p>{{ post.text|linebreaks }}</p>
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
             </div>
-        {% endfor %}
-    {% endblock content %}
-    
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaks }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
+```
 
 ¡Eso es todo! Verifica que tu sitio web aún funcione apropiadamente :)
 
-> Si tienes un error `TemplateDoesNotExists` que diga que no hay un archivo `blog/base.html` y tienes `runserver` ejecutándose en la consola, intenta pararlo (presionando Ctrl+C - las teclas Control y C juntas) y reinicialo ejecutando el comando `python manage.py runserver`.
+> Si tienes un error `TemplateDoesNotExist` que diga que no hay un archivo `blog/base.html` y tienes `runserver` ejecutándose en la consola, intenta pararlo (presionando Ctrl+C - las teclas Control y C juntas) y reinicialo ejecutando el comando `python manage.py runserver`.

@@ -1,5 +1,7 @@
 # ¿Cómo funciona Internet?
 
+> Para los lectores en casa: este capítulo está cubierto en el video [How the Internet Works](https://www.youtube.com/watch?v=oM9yAA09wdc) (en Inglés).
+
 > Este capitulo está inspirado por la charla "How the Internet works" de Jessica McKellar (http://web.mit.edu/jesstess/www/).
 
 Apostamos que utilizas Internet todos los días. Pero, ¿sabes lo que pasa cuando escribes una dirección como http://djangogirls.org en tu navegador y presionas `enter`?
@@ -8,37 +10,29 @@ Lo primero que tienes que entender es que un sitio web es sólo un montón de ar
 
 Si no estás familiarizada con la programación, puede ser difícil de captar HTML a la primera, pero tus navegadores web (como Chrome, Safari, Firefox, etc.) lo aman. Los navegadores están diseñados para entender este código, seguir sus instrucciones y presentar estos archivos de los cuales está hecho tu sitio web, exactamente de la forma que quieres.
 
-Como cualquier otro archivo, tenemos que guardar los archivos HTML en algún lugar de un disco duro. Para Internet, usamos ordenadores especiales y poderosos llamados *servidores*. Estos no tienen una pantalla, ratón o teclado, debido a que su propósito es almacenar datos y servirlos. Por esa razón son llamados *servidores* -- porque ellos *sirven* los datos.
+Como cualquier otro archivo, tenemos que guardar los archivos HTML en algún lugar de un disco duro. Para Internet, usamos ordenadores especiales y poderosos llamados *servidores*. Estos no tienen una pantalla, ratón o teclado, debido a que su propósito es almacenar datos y servirlos. Por esa razón son llamados *servidores*, porque ellos *sirven* los datos.
 
-Ok, quizás te preguntes cómo luce Internet, ¿cierto?
+Bien, quizás te preguntes cómo luce Internet, ¿cierto?
 
 ¡Te hemos hecho una imagen! Luce algo así:
 
-![Figura 1.1][1]
-
- [1]: images/internet_1.png
+![Figura 1.1](images/internet_1.png)
 
 Parece un lío, ¿no? En realidad es una red de máquinas conectadas (los mencionados *servidores*). ¡Cientos de miles de máquinas! ¡Muchos, muchos kilómetros de cables alrededor del mundo! Puedes visitar el sitio web Submarine Cable Map (http://submarinecablemap.com/) y ver lo complicada que es la red. Aquí hay una captura de pantalla de la página web:
 
-![Figura 1.2][2]
-
- [2]: images/internet_3.png
+![Figura 1.2](images/internet_3.png)
 
 Es fascinante, ¿no? Pero, obviamente, no es posible tener un cable entre cada máquina conectada a Internet. Así que, para llegar a una máquina (por ejemplo la que aloja a http://djangogirls.org) tenemos que pasar una solicitud a través de muchas máquinas diferentes.
 
 Se parece a esto:
 
-![Figura 1.3][3]
-
- [3]: images/internet_2.png
+![Figura 1.3](images/internet_2.png)
 
 Imagina que cuando escribes http://djangogirls.org, estas enviando una carta que dice: "Queridas Django Girls, me gustaría ver su sitio web djangogirls.org. Por favor, envíenmelo!"
 
 Tu carta va hacia la oficina de correo más cercana. Luego va a otra que es un poco más cerca de su destinatario, luego otra y otra hasta que es entregada a su destino. La única cosa diferente es que si envías muchas cartas (*paquetes de datos*) al mismo lugar, cada una podría ir a través de oficinas de correos totalmente distintas (*routers*). Esto depende de cómo se distribuyen en cada oficina.
 
-![Figura 1.4][4]
-
- [4]: images/internet_4.png
+![Figura 1.4](images/internet_4.png)
 
 Sí, es tan simple como eso. Enviar mensajes y esperar alguna respuesta. Por supuesto, en vez de papel y lapicera usas bytes de datos, ¡pero la idea es la misma!
 

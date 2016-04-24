@@ -10,18 +10,24 @@ Las Vistas se colocan en el archivo `views.py`. Agregaremos nuestras *views* al 
 
 Bien, vamos abrir este archivo y ver lo que contiene:
 
-    python
-    from django.shortcuts import render
-    
-    # Create your views here.
-    
+```python
+from django.shortcuts import render
 
-No demasiadas cosas aquí todavía. La *view* más simple puede ser como esto:
+# Create your views here.
+```
 
-    python
-    def post_list(request):
-        return render(request, 'blog/post_list.html', {})
-    
+
+No demasiadas cosas aquí todavía.
+
+Las líneas que comienzan con `#` son comentarios. Esto significa que esas líneas no serán ejecutadas por Python. Muy útiles, ¿no?
+
+La *view* más simple puede ser como esto:
+
+```python
+def post_list(request):
+    return render(request, 'blog/post_list.html', {})
+```
+
 
 Como puedes ver, hemos creado un método (`def`) llamado `post_list` que recibe una petición, `request`, y devuelve, `return`, un método `render` que renderizará (construirá) la plantilla `blog/post_list.html`.
 
@@ -29,10 +35,8 @@ Guarda el fichero, ve a http://127.0.0.1:8000/ y veamos lo que tenemos ahora.
 
 ¡Otro error! Leamos lo que está pasando ahora:
 
-![Error][1]
+![Error](images/error.png)
 
- [1]: images/error.png
+Esto muestra que el servidor está ejecutándose nuevamente al menos, pero todavía no luce bien, ¿no? No te preocupes, es sólo una página de error, ¡nada de qué asustarse!. Puedes leer *TemplateDoesNotExist*. ¡Vamos a arreglar este error y a crear una plantilla en el siguiente capítulo!
 
-Este es fácil: *TemplateDoesNotExist*. ¡Vamos a arreglar este error y crear una plantilla en el siguiente capítulo!
-
-> Aprende más sobre las vistas de Django leyendo la documentación oficial: https://docs.djangoproject.com/en/1.8/topics/http/views/
+> Aprende más sobre las vistas de Django leyendo la documentación oficial: https://docs.djangoproject.com/en/1.9/topics/http/views/

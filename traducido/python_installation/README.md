@@ -8,6 +8,7 @@ Python se originó en la década de 1980 y su principal objetivo es ser legible 
 
 # Instalación de Python
 
-> **Nota** Si ya pasaste por el proceso de instalación no es necesario hacer esto de nuevo - ¡puedes avanzar al siguiente capítulo!
+> **Nota** Si ya pasaste por el proceso de instalación no es necesario hacer esto de nuevo. ¡Puedes avanzar al siguiente capítulo!
 
 {% include "python_installation/instructions.md" %}
+

@@ -1,6 +1,9 @@
+> Para los lectores en casa: esta capítulo está cubierto en el video [Installing Python & Code Editor](https://www.youtube.com/watch?v=pVTaqzKZCdA) (en Inglés).
+
 > Esta sección está basada en un tutorial por Geek Girls Carrots (http://django.carrots.pl/)
 
 Django está escrito en Python. Necesitamos Python para hacer cualquier cosa en Django. ¡Vamos a empezar con la instalación! Queremos que instales Python 3.4, así que si tienes alguna versión anterior, deberás actualizarla.
+
 
 ### Windows
 
@@ -15,45 +18,44 @@ Algo para tener en cuenta: en la segunda pantalla del asistente de instalación,
 Es muy posible que ya tengas Python instalado de serie. Para verificar que ya lo tienes instalado (y qué versión es), abre una consola y escribe el siguiente comando:
 
     $ python3 --version
-    Python 3.4.2
-    
+    Python 3.4.3
 
 Si no tienes instalado Python o si deseas una versión diferente, puedes instalarla de la siguiente manera:
+
 
 #### Debian o Ubuntu
 
 Escribe este comando en tu consola:
 
-    sudo apt-get install python3.4
-    
+    $ sudo apt-get install python3.4
+
 
 #### Fedora (hasta 21)
 
 Usa este comando en tu consola:
 
-    sudo yum install python3.4
-    
+    $ sudo yum install python3
+
 
 #### Fedora (22 +)
 
 Usa este comando en tu consola:
 
-    $ sudo dnf instalar python3.4
-    
+    $ sudo dnf install python3
+
 
 ### OS X
 
-Debes ir al sitio web https://www.python.org/downloads/release/python-342/ y descargar el instalador de Python:
+Debes ir al sitio web https://www.python.org/downloads/release/python-343/ y descargar el instalador de Python:
 
-  * Descargar el archivo *Mac OS X 64-bit/32-bit installer*,
-  * Haga doble clic en *python-3.4.3-macosx10.6.pkg* para ejecutar al instalador.
+* Descargar el archivo *Mac OS X 64-bit/32-bit installer*,
+* Haga doble clic en *python-3.4.3-macosx10.6.pkg* para ejecutar al instalador.
 
 Verifica que la instalación fue correcta abriendo la aplicación de *Terminal* y ejecutando el comando `python3`:
 
     $ python3 --version
-    Python 3.4.2
-    
+    Python 3.4.3
 
-* * *
+----
 
 Si tienes alguna duda o si algo salió mal y no sabes cómo resolverlo - ¡pide ayuda a tu tutor! A veces las cosas no van bien y que es mejor pedir ayuda a alguien con más experiencia.
