@@ -1,0 +1,4 @@
+Version used for translation:
+
+Crowdin: April 24, 2016
+https://crowdin.com/download/project/django-girls-tutorial.zip
