@@ -1,9 +1,6 @@
 > Part of this section is based on tutorials by Geek Girls Carrots (https://github.com/ggcarrots/django-carrots).
 
-> Part of this section is based on the [django-marcador
-tutorial](http://django-marcador.keimlink.de/) licensed under Creative Commons
-Attribution-ShareAlike 4.0 International License. The django-marcador tutorial
-is copyrighted by Markus Zapke-Gründemann et al.
+> Part of this section is based on the [django-marcador tutorial](http://django-marcador.keimlink.de/) licensed under Creative Commons Attribution-ShareAlike 4.0 International License. The django-marcador tutorial is copyrighted by Markus Zapke-Gründemann et al.
 
 
 ## Virtual environment
@@ -33,8 +30,7 @@ where `C:\Python34\python` is the directory in which you previously installed Py
 
 ### Linux and OS X
 
-Creating a `virtualenv` on both Linux and OS X is as simple as running `python3 -m venv myvenv`.
-It will look like this:
+Creating a `virtualenv` on both Linux and OS X is as simple as running `python3 -m venv myvenv`. It will look like this:
 
     $ python3 -m venv myvenv
 
@@ -99,14 +95,17 @@ Now that you have your `virtualenv` started, you can install Django using `pip`.
     Cleaning up...
 
 on Windows
+
 > If you get an error when calling pip on Windows platform please check if your project pathname contains spaces, accents or special characters (for example, `C:\Users\User Name\djangogirls`). If it does please consider using another place without spaces, accents or special characters (suggestion is: `C:\djangogirls`). Create a new virtualenv in the new directory, then delete the old one and try the above command again. (Moving the virtualenv directory won't work since virtualenv uses absolute paths.)
 
 on Windows 8 and Windows 10
+
 > Your command line might freeze after when you try to install Django. If this happens, instead of the above command use:
 
 >     C:\Users\Name\djangogirls> python -m pip install django~=1.9.0
 
 on Linux
+
 > If you get an error when calling pip on Ubuntu 12.04 please run `python -m pip install -U --force-reinstall pip` to fix the pip installation in the virtualenv.
 
 That's it! You're now (finally) ready to create a Django application!

@@ -382,8 +382,7 @@ Have you heard of the expression "comparing apples to oranges"? Let's try the Py
       File "<stdin>", line 1, in <module>
     TypeError: unorderable types: int() > str()
 
-Here you see that just like in the expression, Python is not able to compare a number (`int`) and a string (`str`).
-Instead, it shows a **TypeError** and tells us the two types can't be compared together.
+Here you see that just like in the expression, Python is not able to compare a number (`int`) and a string (`str`). Instead, it shows a **TypeError** and tells us the two types can't be compared together.
 
 ## Boolean
 
@@ -558,7 +557,7 @@ else:
 ```
 
 Python runs through each test in sequence and prints:
-     
+
     $ python3 python_intro.py
     Perfect, I can hear all the details
 
@@ -627,9 +626,7 @@ Remember: The `print` function is indented four spaces within the `if` statement
       hi()
     TypeError: hi() missing 1 required positional argument: 'name'
 
-Oops, an error. Luckily, Python gives us a pretty useful error message.
-It tells us that the function `hi()` (the one we defined) has one required argument (called `name`) and that we forgot to pass it when calling the function.
-Let's fix it at the bottom of the file:
+Oops, an error. Luckily, Python gives us a pretty useful error message. It tells us that the function `hi()` (the one we defined) has one required argument (called `name`) and that we forgot to pass it when calling the function. Let's fix it at the bottom of the file:
 
 ```python
 hi("Ola")

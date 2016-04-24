@@ -48,7 +48,7 @@ And save it as `.gitignore` in the "djangogirls" folder.
 
 > **Note** The dot at the beginning of the file name is important!  If you're having any difficulty creating it (Macs don't like you to create files that begin with a dot via the Finder, for example), then use the "Save As" feature in your editor, it's bulletproof.
 
-> **Note** One of the files you specified in your`.gitignore` file is `db.sqlite3`. That file is your local database, where all or your posts are stored. We don't want to add this to your repository, because your website on PythonAnywhere is going to be using a different database.  That database could be SQLite, like your development machine, but usually, you will use one called MySQL which can deal with a lot more site visitors than SQLite. Either way, by ignoring your SQLite database for the GitHub copy, it means that all of the posts you created so far are going to stay and only be available locally, but you're gonna have to add them again on production. You should think of your local database as a good playground where you can test different things and not be afraid that you're going to delete your real posts from your blog.
+> **Note** One of the files you specified in your `.gitignore` file is `db.sqlite3`. That file is your local database, where all of your posts are stored. We don't want to add this to your repository, because your website on PythonAnywhere is going to be using a different database.  That database could be SQLite, like your development machine, but usually, you will use one called MySQL which can deal with a lot more site visitors than SQLite. Either way, by ignoring your SQLite database for the GitHub copy, it means that all of the posts you created so far are going to stay and only be available locally, but you're gonna have to add them again on production. You should think of your local database as a good playground where you can test different things and not be afraid that you're going to delete your real posts from your blog.
 
 It's a good idea to use a `git status` command before `git add` or whenever you find yourself unsure of what has changed. This will help stop any surprises from happening, such as wrong files being added or commited. The `git status` command returns information about any untracked/modifed/staged files, branch status, and much more. The output should be similar to:
 
@@ -113,7 +113,6 @@ Enter your GitHub username and password and you should see something like this:
 <!--TODO: maybe do ssh keys installs in install party, and point ppl who dont have it to an extention -->
 
 Your code is now on GitHub. Go and check it out!  You'll find it's in fine company - [Django](https://github.com/django/django), the [Django Girls Tutorial](https://github.com/DjangoGirls/tutorial), and many other great open source software projects also host their code on GitHub :)
-
 
 # Setting up our blog on PythonAnywhere
 
@@ -242,7 +241,7 @@ application = StaticFilesHandler(get_wsgi_application())
 ```
 
 > **Note** Don't forget to substitute in your own username where it says `<your-username>`
-> **Note** In line three, we make sure Python anywhere knows how to find our application. It is very important that this path name is correct, and especially that there are no extra spaces here. Otherwise you will see an "ImportError" in the error log.
+> **Note** In line three, we make sure PythonAnywhere knows how to find our application. It is very important that this path name is correct, and especially that there are no extra spaces here. Otherwise you will see an "ImportError" in the error log.
 
 This file's job is to tell PythonAnywhere where our web app lives and what the Django settings file's name is.
 

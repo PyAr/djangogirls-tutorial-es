@@ -6,14 +6,11 @@
 
 We bet you use the Internet every day. But do you actually know what happens when you type an address like http://djangogirls.org into your browser and press `enter`?
 
-The first thing you need to understand is that a website is just a bunch of files saved on a hard disk. Just like your movies, music, or pictures.
-However, there is one part that is unique for websites: they include computer code called HTML.
+The first thing you need to understand is that a website is just a bunch of files saved on a hard disk. Just like your movies, music, or pictures. However, there is one part that is unique for websites: they include computer code called HTML.
 
-If you're not familiar with programming it can be hard to grasp HTML at first, but your web browsers (like Chrome, Safari, Firefox, etc.) love it. Web browsers are designed to understand this code,
-follow its instructions, and present these files that your website is made of, exactly the way you want.
+If you're not familiar with programming it can be hard to grasp HTML at first, but your web browsers (like Chrome, Safari, Firefox, etc.) love it. Web browsers are designed to understand this code, follow its instructions, and present these files that your website is made of, exactly the way you want.
 
-As with every file, we need to store HTML files somewhere on a hard disk. For the Internet, we use special, powerful computers called *servers*. They don't have
-a screen, mouse or a keyboard, because their main purpose is to store data and serve it. That's why they're called *servers* -- because they *serve* you data.
+As with every file, we need to store HTML files somewhere on a hard disk. For the Internet, we use special, powerful computers called *servers*. They don't have a screen, mouse or a keyboard, because their main purpose is to store data and serve it. That's why they're called *servers* -- because they *serve* you data.
 
 OK, but you want to know how the Internet looks like, right?
 

@@ -142,7 +142,7 @@ Yaaay! But so far, our template only ever displays exactly __the same informatio
 
 What we really want to do is display real posts added in our Django admin - and that's where we're going next.
 
-## One more thing:  deploy!
+## One more thing: deploy!
 
 It'd be good to see all this out and live on the Internet, right?  Let's do another PythonAnywhere deploy:
 

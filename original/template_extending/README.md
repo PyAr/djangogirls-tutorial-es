@@ -70,16 +70,16 @@ Then in `base.html`, replace your whole `<body>` (everything between `<body>` an
 </body>
 ```
 
-{% raw %}You might notice this replaced everything from `{% for post in posts %}` to `{% endfor %}` with: {% endraw %}
+{% raw %}You might notice this replaced everything from `{% for post in posts %}` to `{% endfor %}` with:{% endraw %}
 
 ```html
 {% block content %}
 {% endblock %}
 ```
+
 But why?  You just created a `block`!  You used the template tag `{% block %}` to make an area that will have HTML inserted in it. That HTML will come from another templates that extends this template (`base.html`). We will show you how to do this in a moment.
 
-Now save `base.html`, and open your `blog/templates/blog/post_list.html` again.
-{% raw %}You're going to remove everything above `{% for post in posts %}` and below `{% endfor %}`. When you're done the file will look like this:{% endraw %}
+Now save `base.html`, and open your `blog/templates/blog/post_list.html` again. {% raw %}You're going to remove everything above `{% for post in posts %}` and below `{% endfor %}`. When you're done the file will look like this:{% endraw %}
 
 ```html
 {% for post in posts %}
@@ -93,8 +93,7 @@ Now save `base.html`, and open your `blog/templates/blog/post_list.html` again.
 {% endfor %}
 ```
 
-We want to use this as part of our template for all the content blocks.
-Time to add block tags to this file!
+We want to use this as part of our template for all the content blocks. Time to add block tags to this file!
 
 {% raw %}You want your block tag to match the tag in your `base.html` file. You also want it to include all the code that belongs in your content blocks. To do that, put everything between `{% block content %}` and `{% endblock content %}`. Like this: {% endraw %}
 
@@ -112,7 +111,9 @@ Time to add block tags to this file!
     {% endfor %}
 {% endblock %}
 ```
+
 Only one thing left. We need to connect these two templates together.  This is what extending templates is all about!  We'll do this by adding an extends tag to the beginning of the file. Like this:
+
 ```html
 {% extends 'blog/base.html' %}
 

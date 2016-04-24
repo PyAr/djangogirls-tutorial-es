@@ -47,7 +47,7 @@ It's time to open `blog/templates/blog/base.html`. We will add a link in `div` n
 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 ```
 
-Note that we want to call our new view `post_new`. The class `"glyphicon glyphicon-plus"` is provided by the bootstrap theme we are using, and will display a plus sign for us.
+Note that we want to call our new view `post_new`. The class `"glyphicon glyphicon-plus"` is provided by the Bootstrap theme we are using, and will display a plus sign for us.
 
 After adding the line, your html file should now look like this:
 
@@ -257,7 +257,7 @@ Now we know how to add a new form. But what if we want to edit an existing one? 
 
 Open `blog/templates/blog/post_detail.html` and add this line:
 
-```python
+```html
 <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
 ```
 

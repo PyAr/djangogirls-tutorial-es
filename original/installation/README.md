@@ -9,6 +9,7 @@ If you find it useful, you can follow through this chapter too. But if you wanna
 Good luck!
 
 # Installation
+
 In the workshop you will be building a blog, and there are a few setup tasks in the tutorial which would be good to work through beforehand so that you are ready to start coding on the day.
 
 # Install Python

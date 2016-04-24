@@ -115,7 +115,7 @@ If you try to visit http://127.0.0.1:8000/ now, then you'll find some sort of 'w
 
 ![Error](images/error1.png)
 
-Your console is showing an error but don't worry&mdash;they're actually pretty useful:
+Your console is showing an error but don't worry - they're actually pretty useful:
 
 It's telling you that there is __no attribute 'post_list'__. That's the name of the *view* that Django is trying to find and use, but we haven't created it yet. No worries, we will get there.
 

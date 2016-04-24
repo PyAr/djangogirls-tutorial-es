@@ -61,6 +61,7 @@ urlpatterns = [
 ```
 
 This part ``^post/(?P<pk>\d+)/$`` looks scary, but no worries - we will explain it for you:
+
 - it starts with `^` again -- "the beginning"
 - `post/` only means that after the beginning, the URL should contain the word __post__ and __/__. So far so good.
 - `(?P<pk>\d+)` - this part is trickier. It means that Django will take everything that you place here and transfer it to a view as a variable called `pk`. `\d` also tells us that it can only be a digit, not a letter (so everything between 0 and 9). `+` means that there needs to be one or more digits there. So something like `http://127.0.0.1:8000/post//` is not valid, but `http://127.0.0.1:8000/post/1234567890/` is perfectly ok!

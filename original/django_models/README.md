@@ -64,7 +64,7 @@ To keep everything tidy, we will create a separate application inside our projec
     (myvenv) ~/djangogirls$ python manage.py startapp blog
 
 You will notice that a new `blog` directory is created and it contains a number of files now. Our directories and files in our project should look like this:
-    
+
     djangogirls
     ├── blog
     │   ├── __init__.py
