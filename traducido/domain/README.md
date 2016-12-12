@@ -1,9 +1,11 @@
 # Dominio
 
-Heroku le entregó un dominio pero es largo, dificil de recordar y feo. Seria asombroso contar con un nombre de dominio que sea sencillo y facil de recordar, ¿verdad?
+PythonAnywhere te provee un dominio gratis, pero tal vez no quieres tener
+".pythonanywhere.com" al final de la URL de tu blog. Tal vez quieres que tu
+blog diga sólo "www.infinite-kitten-picrures.org" o
+"www.3d-printed-steam-engine-parts.com" o "www.antique-buttons.com" o "www.mutant-unicornz.net" o lo que sea.
 
-En este capítulo te enseñaremos como adquirir un dominio y dirigirlo a Heroku!
-
+Ahora hablaremos un poco sobre dónde obtener un dominio, y cómo conectarlo con tu aplicación web en PythonAnywhere. No obstante, debes saber que la mayoría de los dominios tienen un costo monetario, y además, PythonAnywhere también cobra una cuota mensual para usar tu propio nombre de domnio -- en total no es mucho dinero, pero probablemente quieras hacerlo cuando estés realmente seguro!.
 ## ¿Dónde registrar un dominio?
 
 Un dominio típico cuesta alrededor de 15 dólares estadounidenses anuales. Hay opciones más baratas y más caras, dependiendo del proveedor. Hay una gran cantidad de empresas a las que puedes comprar un dominio: una simple [búsqueda en google][1] dará cientos de opciones.
